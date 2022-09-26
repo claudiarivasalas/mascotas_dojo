@@ -1,9 +1,11 @@
 class Mascota():
-    # implementa __init__( name , tipo , golosinas):
-    def __init__(self, nombre, tipo, golosina):
+    # implementa __init__( name , tipo , golosinas, salud, energia):
+    def __init__(self, nombre, tipo, golosina, salud, energia):
         self.nombre=nombre
         self.tipo= tipo
         self.golosina=golosina
+        self.salud=salud
+        self.energia=energia
 
     # implementa los siguientes métodos:
     # dormir() - incrementa la energía de la mascota en 25
@@ -19,22 +21,21 @@ class Mascota():
     def jugar(self):
         self.salud +=5
         return self
-    # sonido() - incrementa la salud de la mascota en 5
+    ## sonido() - imprime el sonido de la mascota
     def sonido(self):
-        self.salud +=5
-        return self
+        print(self.noise)
 
 
 class Perro(Mascota):
     def __init__(self,nombre, tipo, golosina, salud, energia):
-        super().__init__(nombre,tipo,golosina)
+        super().__init__(nombre, tipo, golosina, salud, energia)
 
     def sonido(self):
         print("Guauuu")
 
 class Gato(Mascota):
     def __init__(self,nombre, tipo, golosina, salud, energia):
-        super().__init__(nombre,tipo,golosina)
+        super().__init__(nombre, tipo, golosina, salud, energia)
 
     def sonido(self):
         print("Miauu")

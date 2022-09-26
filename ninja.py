@@ -10,10 +10,13 @@ class Ninja():
     # caminar(): pasea a la mascota del ninja invocando el método de mascota jugar()
     def caminar(self):
         self.mascota.jugar()
+        return self
     # alimentar(): alimenta a la mascota del ninja invocando el método de mascota comer()
     def alimentar(self):
         self.mascota.comer()
+        return self
     # bañar(): limpia la mascota del ninja invocando el método de mascota sonido()
     def bañar(self):
-        self.mascota.sonido()  	
+        self.mascota.sonido()
+        return self
     
